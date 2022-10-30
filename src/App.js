@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Knight/>}/>
         <Route path='/knight' element={<Knight/>}/>
-        <Route path="*" element={<Knight />} />
+        
       </Routes>
     </BrowserRouter>
   );
