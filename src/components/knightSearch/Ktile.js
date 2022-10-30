@@ -7,8 +7,9 @@ const Ktile=(props)=>{
     const change=props.change;
 
     return(
-        <div className='clickableTile'
-            style={typeof(value)=='number'? {backgroundColor:`rgba(6,123,194, ${1-0.05*value}) ` } : {}}
+        <div className={typeof(value)=='number'? 'clickableTile active': 'clickableTile'}
+            style={typeof(value)=='number'? {backgroundColor:`rgba(6,123,194, ${1-0.1*value}) ` } : {}}
+            
             onClick={()=>{
             change(coords,"K");
         }}>

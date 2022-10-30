@@ -1,3 +1,4 @@
+
 .row{
     display: flex;
     flex-grow: 1;
@@ -38,12 +39,13 @@
     aspect-ratio: 1/1
 }
 
+
 .row:nth-child(odd) .tile:nth-child(even) .clickableTile{
-    background-color: #6E8387;
+    --primary-color:#6E8387;
 }
 
 .row:nth-child(even) .tile:nth-child(odd) .clickableTile{
-    background-color: #6E8387;
+    --primary-color:#6E8387;
 }
 
 .row:nth-child(1){
@@ -56,9 +58,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    transition: all 0.35s ease 0s;
+    background-color: var(--primary-color);
+    transition: all 0.35s ease 0s; 
 }
+
 
 .row:nth-child(odd) .tile:nth-child(even) .clickableTile:hover{
     background-color: #067BC2;
@@ -71,4 +74,3 @@
 .clickableTile:hover{
     background-color: #067BC2;
 }
-

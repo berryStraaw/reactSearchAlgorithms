@@ -50,34 +50,47 @@ const Knight=()=>{
         return paths;
     }
 
-    const updateOneState=(coords,index)=>{
-        setBoard(
-            produce(board, draft=>{
-                draft[coords[0]][coords[1]]=index+1;
-            })
-        );
-    }
+    
     const animate=(paths)=>{
-        setBoard(
+
+        /* setBoard(
             produce(board, draft=>{
                 paths.forEach((coords,index)=>{
                     draft[coords[0]][coords[1]]=index+1;
                 })
             })
-        );
-        /* paths.forEach(async (coords,index)=>{
-            new Promise((resolve)=>{
-                updateOneState(coords,index);
-            });
-            
+        ); */
+        
+        /* paths.forEach((coords,index)=>{
+            setBoard(
+                produce(board, draft=>{
+                    draft[coords[0]][coords[1]]=index+1;
+                })
+            );
         }) */
+
+        let nextState = board;
+
+        paths.forEach((coords, index) => {
+            setTimeout(function(){
+                nextState = produce(nextState, (draft) => {
+                    draft[coords[0]][coords[1]] = index + 1;
+                    });
+                    setBoard(nextState);
+
+            }, index*500); 
+            /* nextState = produce(nextState, (draft) => {
+            draft[coords[0]][coords[1]] = index + 1;
+            });
+            setBoard(nextState); */
+        });
     }
     const lockInputsAndFindPath=(coords)=>{
-        setBoard(
+        /* setBoard(
             produce(board, draft=>{
                 draft[coords[0]][coords[1]]="E";
             })
-        );
+        ); */
         animate(getPath(coords[0],coords[1]));
 
     }
