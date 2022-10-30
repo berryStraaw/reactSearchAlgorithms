@@ -1,0 +1,74 @@
+.row{
+    display: flex;
+    flex-grow: 1;
+    border-left: 1px solid black;
+}
+
+.Controlls{
+    background-color: #E0E0E0;
+    width: 20vw;
+    color: #067BC2;
+}
+
+.Main{
+    background-color: #FFFCF9;
+    display: flex;
+    height: 90vh;
+    width: 100vw;
+}
+
+.Knight{
+    padding: 5vh 5vw;
+    aspect-ratio: 1/1;
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.tile{
+    display: flex;
+    width: 100%;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-left:none;
+    border-top:none;
+    aspect-ratio: 1/1
+}
+
+.row:nth-child(odd) .tile:nth-child(even) .clickableTile{
+    background-color: #6E8387;
+}
+
+.row:nth-child(even) .tile:nth-child(odd) .clickableTile{
+    background-color: #6E8387;
+}
+
+.row:nth-child(1){
+    border-top: 1px solid black;
+}
+
+.clickableTile{
+    width: 100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.35s ease 0s;
+}
+
+.row:nth-child(odd) .tile:nth-child(even) .clickableTile:hover{
+    background-color: #067BC2;
+}
+
+.row:nth-child(even) .tile:nth-child(odd) .clickableTile:hover{
+    background-color: #067BC2;
+}
+
+.clickableTile:hover{
+    background-color: #067BC2;
+}
+

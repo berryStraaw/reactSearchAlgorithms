@@ -1,0 +1,35 @@
+.Controlls{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    align-items: center;
+    padding: 10px;
+}
+
+ol{
+    padding: 0;
+}
+
+li{
+    color: unset;
+    border: unset;
+}
+
+button{
+    width: 75px;
+    height: 2rem;
+    border: 3px solid #9A7AA0;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    color:inherit;
+    font-weight: 800;
+    font-size: 16px;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: #9A7AA0;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
